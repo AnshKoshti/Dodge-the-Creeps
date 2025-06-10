@@ -45,3 +45,5 @@ animation = &"walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2.6, 2.2)
 shape = SubResource("CapsuleShape2D_dqkch")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
