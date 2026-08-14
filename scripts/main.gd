@@ -5,10 +5,6 @@ extends Node
 var score: int
 
 
-func _ready() -> void:
-	new_game()
-
-
 func game_over() -> void:
 	$ScoreTimer.stop()
 	$MobTimer.stop()
