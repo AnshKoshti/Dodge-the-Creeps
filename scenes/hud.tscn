@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://c1qav7lmqn1yt"]
 
 [ext_resource type="FontFile" uid="uid://tgre51gul1f0" path="res://assets/fonts/Xolonium-Regular.ttf" id="1_ahhtf"]
+[ext_resource type="Script" uid="uid://dixl5tia7t1dx" path="res://scripts/hud.gd" id="1_oo0fn"]
 
 [node name="Hud" type="CanvasLayer" unique_id=1888196823]
+script = ExtResource("1_oo0fn")
 
 [node name="ScoreLabel" type="Label" parent="." unique_id=164309720]
 anchors_preset = 5
@@ -56,3 +58,6 @@ text = "Start"
 [node name="MessageTimer" type="Timer" parent="." unique_id=623659258]
 wait_time = 2.0
 one_shot = true
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
